@@ -1,0 +1,3 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/post_disaster_assessment/venv/Scripts/python.exe"
+}

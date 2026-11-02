@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">System Architecture Diagram</title>
+  <desc id="desc">Block diagram for an AI-based post-disaster damage assessment system showing image inputs, preprocessing, model, segmentation output, evaluation metrics, and Streamlit UI.</desc>
+
+  <defs>
+    <style>
+      .title { font: 700 30px 'Segoe UI', Arial, sans-serif; fill: #1f2937; }
+      .label { font: 600 20px 'Segoe UI', Arial, sans-serif; fill: #111827; }
+      .small { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #374151; }
+      .box { fill: #f8fafc; stroke: #334155; stroke-width: 2.2; rx: 16; ry: 16; }
+      .box-accent { fill: #eef6ff; stroke: #1d4ed8; stroke-width: 2.4; rx: 16; ry: 16; }
+      .box-soft { fill: #f5f7fb; stroke: #64748b; stroke-width: 2; rx: 16; ry: 16; }
+      .arrow { stroke: #475569; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .dashed { stroke-dasharray: 8 8; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <text x="700" y="55" text-anchor="middle" class="title">AI-Based Post-Disaster Damage Assessment System</text>
+
+  <rect x="380" y="90" width="640" height="80" class="box-accent"/>
+  <text x="700" y="128" text-anchor="middle" class="label">Streamlit UI</text>
+  <text x="700" y="154" text-anchor="middle" class="small">User uploads images, selects model, and views prediction and metrics</text>
+
+  <rect x="90" y="260" width="240" height="110" class="box"/>
+  <text x="210" y="310" text-anchor="middle" class="label">Pre-Disaster</text>
+  <text x="210" y="338" text-anchor="middle" class="label">Image Input</text>
+
+  <rect x="90" y="450" width="240" height="110" class="box"/>
+  <text x="210" y="500" text-anchor="middle" class="label">Post-Disaster</text>
+  <text x="210" y="528" text-anchor="middle" class="label">Image Input</text>
+
+  <rect x="430" y="335" width="280" height="150" class="box-accent"/>
+  <text x="570" y="380" text-anchor="middle" class="label">Data Preprocessing</text>
+  <text x="570" y="412" text-anchor="middle" class="small">Image loading and resizing</text>
+  <text x="570" y="437" text-anchor="middle" class="small">Tensor conversion and normalization</text>
+  <text x="570" y="462" text-anchor="middle" class="small">Pre/Post image concatenation</text>
+
+  <rect x="810" y="300" width="300" height="220" class="box"/>
+  <text x="960" y="345" text-anchor="middle" class="label">Model</text>
+  <text x="960" y="385" text-anchor="middle" class="small">U-Net</text>
+  <text x="960" y="417" text-anchor="middle" class="small">Siamese U-Net</text>
+  <text x="960" y="449" text-anchor="middle" class="small">Vision Transformer (ViT)</text>
+
+  <rect x="1180" y="350" width="180" height="150" class="box-accent"/>
+  <text x="1270" y="410" text-anchor="middle" class="label">Segmentation</text>
+  <text x="1270" y="438" text-anchor="middle" class="label">Output</text>
+  <text x="1270" y="468" text-anchor="middle" class="small">Predicted damage mask</text>
+
+  <rect x="1115" y="610" width="250" height="150" class="box-soft"/>
+  <text x="1240" y="655" text-anchor="middle" class="label">Evaluation Metrics</text>
+  <text x="1240" y="690" text-anchor="middle" class="small">IoU, Dice, Accuracy, AUC</text>
+
+  <line x1="330" y1="315" x2="430" y2="380" class="arrow"/>
+  <line x1="330" y1="505" x2="430" y2="440" class="arrow"/>
+  <line x1="710" y1="410" x2="810" y2="410" class="arrow"/>
+  <line x1="1110" y1="425" x2="1180" y2="425" class="arrow"/>
+  <line x1="1270" y1="500" x2="1270" y2="610" class="arrow"/>
+
+  <line x1="700" y1="170" x2="960" y2="300" class="arrow dashed"/>
+
+  <text x="805" y="215" text-anchor="middle" class="small">User interaction and visualization</text>
+  <text x="1140" y="585" text-anchor="middle" class="small">Performance assessment</text>
+</svg>

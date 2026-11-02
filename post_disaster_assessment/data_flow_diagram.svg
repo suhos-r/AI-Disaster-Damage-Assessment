@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="500" viewBox="0 0 1500 500" role="img" aria-labelledby="title desc">
+  <title id="title">Data Flow Diagram</title>
+  <desc id="desc">Academic-style data flow diagram for the post-disaster damage assessment pipeline.</desc>
+
+  <defs>
+    <style>
+      .title { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #1f2937; }
+      .label { font: 600 20px 'Segoe UI', Arial, sans-serif; fill: #111827; }
+      .small { font: 500 15px 'Segoe UI', Arial, sans-serif; fill: #374151; }
+      .box { fill: #f8fafc; stroke: #334155; stroke-width: 2.2; rx: 14; ry: 14; }
+      .accent { fill: #eef6ff; stroke: #1d4ed8; stroke-width: 2.4; rx: 14; ry: 14; }
+      .soft { fill: #f5f7fb; stroke: #64748b; stroke-width: 2; rx: 14; ry: 14; }
+      .arrow { stroke: #475569; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <text x="750" y="55" text-anchor="middle" class="title">Post-Disaster Damage Assessment Data Flow Diagram</text>
+
+  <rect x="50" y="170" width="190" height="120" class="box"/>
+  <text x="145" y="215" text-anchor="middle" class="label">Image Input</text>
+  <text x="145" y="248" text-anchor="middle" class="small">Pre-disaster image</text>
+  <text x="145" y="272" text-anchor="middle" class="small">Post-disaster image</text>
+
+  <rect x="290" y="170" width="220" height="120" class="accent"/>
+  <text x="400" y="215" text-anchor="middle" class="label">Preprocessing</text>
+  <text x="400" y="248" text-anchor="middle" class="small">Loading, resizing,</text>
+  <text x="400" y="272" text-anchor="middle" class="small">normalization</text>
+
+  <rect x="560" y="170" width="240" height="120" class="accent"/>
+  <text x="680" y="215" text-anchor="middle" class="label">Tensor Creation</text>
+  <text x="680" y="248" text-anchor="middle" class="small">Pre and post images</text>
+  <text x="680" y="272" text-anchor="middle" class="small">combined as 6-channel input</text>
+
+  <rect x="850" y="170" width="220" height="120" class="box"/>
+  <text x="960" y="215" text-anchor="middle" class="label">Model Inference</text>
+  <text x="960" y="248" text-anchor="middle" class="small">U-Net / Siamese U-Net / ViT</text>
+
+  <rect x="1120" y="170" width="170" height="120" class="accent"/>
+  <text x="1205" y="215" text-anchor="middle" class="label">Output Mask</text>
+  <text x="1205" y="248" text-anchor="middle" class="small">Predicted damage</text>
+  <text x="1205" y="272" text-anchor="middle" class="small">segmentation mask</text>
+
+  <rect x="1085" y="350" width="240" height="100" class="soft"/>
+  <text x="1205" y="390" text-anchor="middle" class="label">Evaluation Metrics</text>
+  <text x="1205" y="420" text-anchor="middle" class="small">IoU, Dice, Accuracy, AUC</text>
+
+  <line x1="240" y1="230" x2="290" y2="230" class="arrow"/>
+  <line x1="510" y1="230" x2="560" y2="230" class="arrow"/>
+  <line x1="800" y1="230" x2="850" y2="230" class="arrow"/>
+  <line x1="1070" y1="230" x2="1120" y2="230" class="arrow"/>
+  <line x1="1205" y1="290" x2="1205" y2="350" class="arrow"/>
+</svg>

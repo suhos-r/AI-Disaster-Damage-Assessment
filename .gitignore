@@ -1,0 +1,13 @@
+# Python virtual environments
+**/venv/
+**/.venv/
+
+# Temporary files and Python caches
+**/.tmp/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated training outputs and model checkpoints
+**/artifacts/
+**/checkpoints/

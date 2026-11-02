@@ -1,0 +1,3 @@
+pre_image_path,post_image_path,mask_path,rainfall,wind_speed,elevation,slope
+pre/pre_0.png,post/post_0.png,masks/mask_0.png,20.029705441731583,68.45906516488043,886.8074352306486,29.613046647659896
+pre/pre_1.png,post/post_1.png,masks/mask_1.png,22.723872518860333,103.66855087447493,987.227162357848,44.76359223872909
